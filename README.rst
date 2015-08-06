@@ -2,10 +2,8 @@ MumbleServerDockerfile
 ======================
 Dockerfile to build images for a mumble server.
 
-:Note: This project is in an **early stage**.
-
-   Please report any issue or comment to github bug tracker :
-   https://github.com/uggla/PAServerDockerfile/issues
+Please report any issue or comment to github bug tracker :
+https://github.com/uggla/MumbleServerDockerfile/issues
 
 Prerequisites
 -------------
@@ -30,10 +28,9 @@ Prerequisites
  
  sudo systemctl start docker.service
  
-- Add a rule into /etc/sudoers to avoid entering your password each time (optional).
- <user-name>	ALL=(ALL)	NOPASSWD: /usr/bin/sudo
-- Add an alias to your .bashrc not enter your sudo password each time (optional).
- alias docker=”sudo docker”
+- Add your user to the docker group.
+  Example :
+  usermod -G docker mumble
 - Open port **64738** and **64738/udp** on your server firewall. Do not forget your firewall router, if you have one in between. 
  Example with firewalld :
  
