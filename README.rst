@@ -3,6 +3,7 @@ MumbleServerDockerfile
 Dockerfile to build images for a mumble server.
 
 Please report any issue or comment to github bug tracker :
+
 https://github.com/uggla/MumbleServerDockerfile/issues
 
 Prerequisites
@@ -29,8 +30,8 @@ Prerequisites
  sudo systemctl start docker.service
  
 - Add your user to the docker group.
-  Example :
-  usermod -G docker mumble
+ Example :
+ usermod -G docker mumble
 - Open port **64738** and **64738/udp** on your server firewall. Do not forget your firewall router, if you have one in between. 
  Example with firewalld :
  
