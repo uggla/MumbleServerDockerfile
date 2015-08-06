@@ -9,10 +9,10 @@ apt-get install -y apt-utils && \
 apt-get install -y vim && \
 apt-get install -y mumble-server
 RUN useradd -k /etc/skel -m -s /bin/bash mumble 
-COPY ./config/setup.sh /
-COPY ./config/mumble-server.ini /etc/mumble-server.ini
+COPY ./tmp/setup.sh /
+COPY ./tmp/mumble-server.ini /etc/mumble-server.ini
 RUN /setup.sh
 USER mumble
 WORKDIR /home/mumble
-COPY ./config/docker-entrypoint.sh /home/mumble/docker-entrypoint.sh
+COPY ./tmp/docker-entrypoint.sh /home/mumble/docker-entrypoint.sh
 #ENTRYPOINT ["/home/mumble/docker-entrypoint.sh"]
