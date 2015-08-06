@@ -86,7 +86,7 @@ pidfile=/var/run/mumble-server/mumble-server.pid
 # configure it here than through D-Bus or Ice.
 #
 # Welcome message sent to clients when they connect.
-welcometext="<br />Welcome to this server running <b>Murmur</b>.<br />Enjoy your stay!<br />"
+welcometext="<br />Welcome to SERVERNAME2REPLACE server running <b>Murmur</b>.<br />Enjoy your stay!<br />"
 
 # Port to bind TCP and UDP sockets to.
 port=64738
@@ -96,7 +96,7 @@ port=64738
 #host=
 
 # Password to join server.
-serverpassword=
+serverpassword=PASSWORD2REPLACE
 
 # Maximum bandwidth (in bits per second) clients are allowed
 # to send speech at.
