@@ -19,15 +19,15 @@ Prerequisites
 
 - Install docker.
  Example :
- sudo apt-get install docker.io
+ apt-get install docker.io
  
  or
  
- sudo yum install docker-io
+ yum install docker-io
  
- sudo systemctl enable docker.service
+ systemctl enable docker.service
  
- sudo systemctl start docker.service
+ systemctl start docker.service
  
 - Add your user to the docker group.
  Example :
@@ -74,7 +74,7 @@ Running instructions
 Modifying container content
 ---------------------------
 - You can edit the container to modify options.
- sudo docker run -u root --entrypoint="/bin/bash" -ti --name "mumble" mumble
+ docker run -u root --entrypoint="/bin/bash" -ti --name "mumble" mumble
  
  
 Ubuntu 15.04 minor defects

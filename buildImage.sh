@@ -29,6 +29,6 @@ sed -i "s/SERVERNAME2REPLACE/$SERVERNAME/" tmp/mumble-server.ini
 sed -i "s/PASSWORD2REPLACE/$PASSWORD/" tmp/mumble-server.ini
 
 if [ "$1" == "nobuild" ]; then exit 0;fi
-sudo docker build --rm=true -t "mumble" .
+docker build --rm=true -t "mumble" .
 
 rm -rf tmp
