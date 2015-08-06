@@ -15,5 +15,3 @@ trap stop_mumble HUP INT QUIT KILL TERM
 
 # Main
 start_mumble
-
-

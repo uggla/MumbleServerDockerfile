@@ -4,8 +4,8 @@
 
 
 echo "Enter SuperUser password :"
-read supassword
-export supassword=$supassword
+read SUPASSWORD
+export SUPASSWORD=$SUPASSWORD
 echo
 
 echo "Enter Server Name :"
@@ -21,7 +21,7 @@ read serverlistonpastats
 echo
 
 # Check inputs
-if [ -z "$supassword" ]; then echo "Password invalid";exit 1;fi
+if [ -z "$SUPASSWORD" ]; then echo "Password invalid";exit 1;fi
 
 if [ "$1" == "nobuild" ]; then exit 0;fi
 sudo docker build --rm=true -t "mumble" .
