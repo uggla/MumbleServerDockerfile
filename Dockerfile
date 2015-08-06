@@ -11,8 +11,6 @@ apt-get install -y mumble-server
 RUN useradd -k /etc/skel -m -s /bin/bash mumble 
 COPY ./tmp/setup.sh /
 COPY ./tmp/mumble-server.ini /etc/mumble-server.ini
-RUN /setup.sh
-USER mumble
-WORKDIR /home/mumble
-COPY ./tmp/docker-entrypoint.sh /home/mumble/docker-entrypoint.sh
-#ENTRYPOINT ["/home/mumble/docker-entrypoint.sh"]
+RUN /setup.sh && rm /setup.sh
+COPY ./config/docker-entrypoint.sh /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
